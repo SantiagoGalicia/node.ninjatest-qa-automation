@@ -22,6 +22,10 @@ To install the project dependencies, run:
 npm install
 ```
 
+Genera un archivo .env con la siguiente estructura en la raiz del proyecto
+URL=http://localhost:3001
+API_URL=http://localhost:3000
+
 ## Scripts
 
 The `package.json` includes the following scripts:
@@ -96,4 +100,3 @@ This project is licensed under the ISC License. See the `LICENSE` file for detai
 
 If you encounter any problems or errors, please report them in the issues section of the repository.
 
----
