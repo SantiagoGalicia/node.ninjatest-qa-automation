@@ -1,86 +1,102 @@
 # Node Ninja Test QA Automation
 
-## Descripción
+## Description
 
-Este proyecto es una suite de pruebas de API utilizando [TestCafe](https://devexpress.github.io/testcafe/). Proporciona configuraciones y scripts para ejecutar pruebas, generar reportes y gestionar dependencias.
+This project is an API testing suite using [TestCafe](https://devexpress.github.io/testcafe/). It provides configurations and scripts to run tests, generate reports, and manage dependencies.
 
-## Tabla de Contenidos
+## Table of Contents
 
-- [Instalación](#instalación)
+- [Installation](#installation)
 - [Scripts](#scripts)
-- [Dependencias](#dependencias)
-- [Uso](#uso)
-- [Reportes](#reportes)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
-- [Problemas](#Problemas)
+- [Dependencies](#dependencies)
+- [Usage](#usage)
+- [Reports](#reports)
+- [Contributing](#contributing)
+- [License](#license)
+- [Issues](#issues)
 
-## Instalación
+## Installation
 
-Para instalar las dependencias del proyecto, ejecuta:
+To install the project dependencies, run:
+```
 npm install
+```
 
 Genera un archivo .env con la siguiente estructura en la raiz del proyecto
 URL=http://localhost:3001
 API_URL=http://localhost:3000
 
 ## Scripts
-El package.json incluye los siguientes scripts:
 
-[Main] Ejecuta las pruebas de TestCafe especificadas en test/main.test.js utilizando la configuración en configs/testcafe.config.js.
+The `package.json` includes the following scripts:
 
+[Main] Runs the TestCafe tests specified in `test/main.test.js` using the configuration in `configs/testcafe.config.js`.
+
+```
 npm run Main
+```
 
-[Allure]: Genera y abre reportes de Allure a partir de los resultados de las pruebas. Asegúrate de tener Allure Commandline instalado globalmente para usar este comando.
+[Allure]: Generates and opens Allure reports from the test results. Make sure to have Allure Commandline installed globally to use this command.
 
+```
 npm run Allure
+```
 
-## Dependencias
-El proyecto utiliza las siguientes dependencias:
+## Dependencies
 
-allure: 0.0.0
-allure-commandline: ^2.30.0
-axios: ^1.7.4
-dotenv: ^16.0.3
-faker: ^5.5.3
-testcafe: ^3.6.2
-testcafe-reporter-allure: ^1.0.5
-testcafe-reporter-html: ^1.4.6
-testcafe-reporter-junit: ^3.0.2
+The project uses the following dependencies:
 
-Para el desarrollo, se usan las siguientes dependencias:
+- allure: 0.0.0
+- allure-commandline: ^2.30.0
+- axios: ^1.7.4
+- dotenv: ^16.0.3
+- faker: ^5.5.3
+- testcafe: ^3.6.2
+- testcafe-reporter-allure: ^1.0.5
+- testcafe-reporter-html: ^1.4.6
+- testcafe-reporter-junit: ^3.0.2
 
-@faker-js/faker: ^7.6.0
-downloads-folder: ^3.0.3
+For development, the following dependencies are used:
 
-## Uso
+- @faker-js/faker: ^7.6.0
+- downloads-folder: ^3.0.3
 
-Para ejecutar las pruebas, usa el siguiente comando:
+## Usage
+
+To run the tests, use the following command:
+```
 npm run main
+```
 
-Para generar y visualizar los reportes de Allure:
+To generate and view Allure reports:
+```
 npm run Allure
+```
 
+## Reports
 
-## Reportes
-El proyecto está configurado para generar reportes en varios formatos. Los reportes se guardarán en los siguientes directorios:
+The project is configured to generate reports in various formats. Reports will be saved in the following directories:
 
-JSON: reports/json/report.json
-HTML: reports/html/report.html
-JUnit: reports/xml/report.xml
-Allure: reports/allure
+- JSON: `reports/json/report.json`
+- HTML: `reports/html/report.html`
+- JUnit: `reports/xml/report.xml`
+- Allure: `reports/allure`
 
-## Contribución
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+## Contributing
 
-Haz un fork del repositorio.
-Crea una nueva rama (git checkout -b feature/your-feature).
-Realiza tus cambios y haz commit (git commit -am 'Add new feature').
-Envía tus cambios (git push origin feature/your-feature).
-Crea un nuevo Pull Request.
+If you want to contribute to this project, please follow these steps:
 
-## Licencia
-Este proyecto está licenciado bajo la Licencia ISC. Consulta el archivo LICENSE para más detalles.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Make your changes and commit (`git commit -am 'Add new feature'`).
+4. Push your changes (`git push origin feature/your-feature`).
+5. Create a new Pull Request.
 
-## Problemas
-Si encuentras algún problema o error, por favor repórtalo en la sección de issues del repositorio.
+## License
+
+This project is licensed under the ISC License. See the `LICENSE` file for details.
+
+## Issues
+
+If you encounter any problems or errors, please report them in the issues section of the repository.
+

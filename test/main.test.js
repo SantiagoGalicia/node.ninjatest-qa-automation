@@ -8,7 +8,6 @@ fixture`Ninja Devices`.page(Url.devices.mainui);
 
 test("Verify page elements", async (t) => {
   const devices = await Utils.getAndSortDevices();
-  console.log(devices);
   if (!Array.isArray(devices)) {
     throw new Error("Expected devices to be an array");
   }
@@ -27,7 +26,7 @@ test("Verify page elements", async (t) => {
   }
 });
 
-test("Verify add elements", async (t) => {
+test.only("Verify add elements", async (t) => {
   await t.setTestSpeed(0.2);
   const randNumber = await Utils.getRandomNumber(3);
   const systemName = faker.company.name();
@@ -39,6 +38,7 @@ test("Verify add elements", async (t) => {
     .typeText(addPageLocators.textBox.txtSystemName, systemName)
     .click(addPageLocators.textBox.txtType);
   const systemType = await addPageLocators.textBox.txtType.child("option").nth(randNumber).innerText;
+  const formatSystemType = await Utils.ValidateType(systemType)
   await t
     .click(addPageLocators.textBox.txtType.child("option").nth(randNumber))
     .typeText(addPageLocators.textBox.txtHddCapacity, hdd_capacity.toString())
@@ -46,6 +46,7 @@ test("Verify add elements", async (t) => {
   await Utils.refresh();
   await t
     .expect(await deviceLocators.label.lblDeviceName.withExactText(systemName).visible).ok()
-    .expect(await deviceLocators.label.lblDeviceName.withExactText(systemName).nextSibling("span").withExactText(systemType).visible).ok()
+    .scrollIntoView(deviceLocators.label.lblDeviceName.withExactText(systemName))
+    .expect(await deviceLocators.label.lblDeviceName.withExactText(systemName).nextSibling("span").withExactText(formatSystemType).visible).ok()
     .expect(await deviceLocators.label.lblDeviceName.withExactText(systemName).nextSibling("span").withExactText(`${hdd_capacity} GB`.toString()).visible).ok();
 });
