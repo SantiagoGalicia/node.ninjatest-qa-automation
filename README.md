@@ -20,6 +20,10 @@ Este proyecto es una suite de pruebas de API utilizando [TestCafe](https://devex
 Para instalar las dependencias del proyecto, ejecuta:
 npm install
 
+Genera un archivo .env con la siguiente estructura en la raiz del proyecto
+URL=http://localhost:3001
+API_URL=http://localhost:3000
+
 ## Scripts
 El package.json incluye los siguientes scripts:
 
