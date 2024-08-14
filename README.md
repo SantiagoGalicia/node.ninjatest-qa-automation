@@ -1,0 +1,1 @@
+# node.ninjatest-qa-automation
