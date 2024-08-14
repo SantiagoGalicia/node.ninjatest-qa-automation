@@ -1,11 +1,11 @@
 const axios = require("axios");
-import { ClientFunction } from 'testcafe';
-import Url from "../../constant/pageUrls"
+import { ClientFunction } from "testcafe";
+import Url from "../../constant/pageUrls";
 
 class Utils {
   async getAndSortDevices() {
     try {
-      const response = await axios.get( Url.devices.endpoint + "/Devices");
+      const response = await axios.get(Url.devices.endpoint + "/Devices");
       const devices = response.data;
       if (!Array.isArray(devices)) {
         throw new Error("Expected devices to be an array");
@@ -30,6 +30,13 @@ class Utils {
       document.location.reload();
     })();
   }
-}
 
+  async ValidateType(type) {
+    if (type === "WINDOWS SERVER") {
+      return "WINDOWS_SERVER";
+    } else {
+      return type;
+    }
+  }
+}
 export default new Utils();
