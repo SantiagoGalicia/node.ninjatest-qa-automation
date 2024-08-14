@@ -1,0 +1,43 @@
+{
+  "name": "node.ninjatest-qa-automation",
+  "version": "1.0.0",
+  "description": "api test with testcafe",
+  "main": "index.js",
+  "scripts": {
+    "Main": "npx testcafe test/main.test.js --config-file configs/testcafe.config.js",
+    "Allure": "allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantiagoGalicia/node.ninjatest-qa-automation.git"
+  },
+  "keywords": [
+    "testcafe",
+    "axios"
+  ],
+  "author": "santiago.galicia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SantiagoGalicia/node.ninjatest-qa-automation/issues"
+  },
+  "homepage": "https://github.com/SantiagoGalicia/node.ninjatest-qa-automation#readme",
+  "dependencies": {
+    "allure": "^0.0.0",
+    "allure-commandline": "^2.30.0",
+    "axios": "^1.7.4",
+    "dotenv": "^16.0.3",
+    "faker": "^5.5.3",
+    "testcafe": "^3.6.2",
+    "testcafe-reporter-allure": "^1.0.5",
+    "testcafe-reporter-html": "^1.4.6",
+    "testcafe-reporter-junit": "^3.0.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "downloads-folder": "^3.0.3"
+  },
+  "overrides": {
+    "semver": "^7.5.3",
+    "word-wrap": "npm:@aashutoshrathi/word-wrap@^1.2.4"
+  }
+}

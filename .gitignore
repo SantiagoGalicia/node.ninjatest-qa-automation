@@ -45,6 +45,15 @@ jspm_packages/
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
+# allure reports 
+allure/
+
+#reports
+reports/
+
+#screenshots
+screenshots/
+
 # TypeScript cache
 *.tsbuildinfo
 
