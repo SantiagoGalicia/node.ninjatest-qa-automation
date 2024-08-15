@@ -5,7 +5,7 @@
 This project is an API testing suite using [TestCafe](https://devexpress.github.io/testcafe/). It provides configurations and scripts to run tests, generate reports, and manage dependencies.
 
 testcafe-project/
-
+│ 
 ├── configs/
 │   ├── testcafe.config.js 
 │ 
