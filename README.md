@@ -4,6 +4,41 @@
 
 This project is an API testing suite using [TestCafe](https://devexpress.github.io/testcafe/). It provides configurations and scripts to run tests, generate reports, and manage dependencies.
 
+testcafe-project/
+
+├── configs/
+│   ├── testcafe.config.js 
+│ 
+├── constans/
+│   ├── pageUrls.js
+│ 
+├── pages/
+│   ├── actions/
+│       ├── Utils.js
+│ 
+├── locators/
+│   ├── AddPageLocators/
+│   ├── mainPageLocators/
+│
+├── reports/
+│   ├── json/
+│
+├── screenshots/
+│   
+├── tests/
+│   ├── main.test.js
+│
+└── allure/
+│    ├── allure-results
+│    ├── allure-report.js
+│     
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── README.md
+├── .env   
+
+
 ## Table of Contents
 
 - [Installation](#installation)
