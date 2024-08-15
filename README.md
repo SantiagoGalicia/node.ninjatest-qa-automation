@@ -58,8 +58,10 @@ npm install
 ```
 
 Create a .env file with the following structure in the root of the project.
+```
 URL=http://localhost:3001
 API_URL=http://localhost:3000
+```
 
 ## Scripts
 
