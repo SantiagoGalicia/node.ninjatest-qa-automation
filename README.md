@@ -118,7 +118,7 @@ The project is configured to generate reports in various formats. Reports will b
 - JSON: `reports/json/report.json`
 - HTML: `reports/html/report.html`
 - JUnit: `reports/xml/report.xml`
-- Allure: `reports/allure`
+- Allure: `/allure/allure-report/index.html`
 
 ## Contributing
 
