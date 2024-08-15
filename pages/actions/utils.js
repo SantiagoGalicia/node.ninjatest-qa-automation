@@ -21,6 +21,43 @@ class Utils {
     }
   }
 
+  async getDeviceById(id) {
+    try {
+      const response = await axios.get(Url.devices.endpoint + "/devices/" + id);
+      return response.data;
+    } catch (error) {
+      console.error(`Error fetching device with ID ${id}:`, error.message);
+    }
+  }
+
+  async deleteDeviceById(id) {
+    try {
+      const response = await axios.delete(Url.devices.endpoint + "/devices/" + id
+      );
+      return response.data;
+    } catch (error) {
+      console.error(`Error fetching device with ID ${id}:`, error.message);
+    }
+  }
+
+  async updateDevice(id,type,hdd_capacity) {
+    const deviceData = {
+      system_name: "Renamed Device",
+      type: type,
+      hdd_capacity: hdd_capacity,
+    };
+    try {
+      const response = await axios.put(
+        Url.devices.endpoint + "/devices/" + id,
+        deviceData
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error updating device:", error.message);
+      throw error;
+    }
+  }
+
   async getRandomNumber(max) {
     return Math.floor(Math.random() * max);
   }
